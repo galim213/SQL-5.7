@@ -1,0 +1,17 @@
+SELECT MIN (rental_duration) AS minimal_rental_duration,
+       MAX (rental_duration) AS maximal_rental_duration,
+       AVG (rental_duration)  AS average_rental_duration,
+       COUNT (rental_duration) AS rental_duration_count,
+       MIN  (rental_rate) AS minimal_rental_rate,
+       MAX  (rental_rate) AS maximal_rental_rate,
+       AVG  (rental_rate) AS average_rental_rate,
+       COUNT (rental_rate) AS rental_rate_count,
+       MIN (replacement_cost) AS mininal_replacement_cost,
+       MAX (replacement_cost) AS maximal_replacement_cost,
+       AVG (replacement_cost) AS average_replacement_cost,
+       COUNT (replacement_cost) AS replacement_cost_count,
+       MIN (length) AS minimal_length,
+       MAX (length) AS maximal_length,
+       AVG (length) AS average_length,
+       COUNT (length) AS length_count 
+ FROM film
