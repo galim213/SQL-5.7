@@ -1,0 +1,65 @@
+**Duplicates**
+SELECT film_id,
+       title,
+       description,
+       language_id,
+       rental_duration,
+       rental_rate,
+       length,
+       replacement_cost,
+       rating,
+       last_update,
+       special_features,
+       full_text
+ FROM films
+ GROUP BY film_id,
+       title,
+       description,
+       language_id,
+       rental_duration,
+       rental_rate,
+       length,
+       replacement_cost,
+       rating,
+       last_update,
+       special_features,
+       full_text
+ HAVING COUNT (*) > 1;
+ 
+ 
+ **Non uniform data ** 
+ 
+ SELECT film_id,
+       title,
+       description,
+       language_id,
+       rental_duration,
+       rental_rate,
+       length,
+       replacement_cost,
+       rating,
+       last_update,
+       special_features,
+       full_text
+ FROM films
+  GROUP BY film_id,
+       title,
+       description,
+       language_id,
+       rental_duration,
+       rental_rate,
+       length,
+       replacement_cost,
+       rating,
+       last_update,
+       special_features,
+       full_text
+ ORDER BY Film_id ASC
+ 
+ **Missing data** 
+ 
+ SELECT * 
+ FROM film
+ WHERE rating is NULL
+ 
+ 
